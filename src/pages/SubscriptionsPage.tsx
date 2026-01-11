@@ -107,7 +107,7 @@ export default function SubscriptionsPage() {
   const [selectedMealPlan, setSelectedMealPlan] = useState("balanced");
 
   return (
-    <CustomerLayout cartItemCount={0}>
+    <CustomerLayout>
       <div className="min-h-screen bg-background">
         {/* Hero */}
         <section className="bg-gradient-to-br from-primary/10 via-background to-secondary/20 py-16">
