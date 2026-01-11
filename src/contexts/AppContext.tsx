@@ -1,6 +1,8 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
 // Types
+export type UserRole = "super_admin" | "operations" | "marketing" | "support" | "customer";
+
 export interface User {
   id: string;
   name: string;
@@ -8,6 +10,7 @@ export interface User {
   phone: string;
   avatar?: string;
   isAdmin: boolean;
+  role: UserRole;
 }
 
 export interface CartItem {
@@ -80,6 +83,7 @@ const DEMO_USERS: User[] = [
     email: "admin@healthygreens.com",
     phone: "+91 98765 43210",
     isAdmin: true,
+    role: "super_admin",
   },
   {
     id: "user-1",
@@ -88,6 +92,7 @@ const DEMO_USERS: User[] = [
     phone: "+91 98765 43211",
     avatar: "https://i.pravatar.cc/100?img=1",
     isAdmin: false,
+    role: "customer",
   },
 ];
 
@@ -170,6 +175,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       email,
       phone: "",
       isAdmin: false,
+      role: "customer",
     };
     DEMO_USERS.push(newUser);
     setUser(newUser);
