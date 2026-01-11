@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AppProvider } from "@/contexts/AppContext";
+import ProtectedRoute from "@/components/auth/ProtectedRoute";
 
 // Customer Pages
 import HomePage from "./pages/HomePage";
@@ -85,21 +86,21 @@ const App = () => (
             <Route path="/refunds" element={<RefundsPage />} />
             <Route path="/cookies" element={<CookiesPage />} />
             
-            {/* Admin Routes */}
-            <Route path="/admin" element={<AdminDashboard />} />
-            <Route path="/admin/orders" element={<AdminOrders />} />
-            <Route path="/admin/subscriptions" element={<AdminSubscriptions />} />
-            <Route path="/admin/menu" element={<AdminMenu />} />
-            <Route path="/admin/customers" element={<AdminCustomers />} />
-            <Route path="/admin/payments" element={<AdminPayments />} />
-            <Route path="/admin/delivery" element={<AdminDelivery />} />
-            <Route path="/admin/marketing" element={<AdminMarketing />} />
-            <Route path="/admin/inventory" element={<AdminInventory />} />
-            <Route path="/admin/reviews" element={<AdminReviews />} />
-            <Route path="/admin/analytics" element={<AdminAnalytics />} />
-            <Route path="/admin/support" element={<AdminSupport />} />
-            <Route path="/admin/staff" element={<AdminStaff />} />
-            <Route path="/admin/settings" element={<AdminSettings />} />
+            {/* Protected Admin Routes */}
+            <Route path="/admin" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
+            <Route path="/admin/orders" element={<ProtectedRoute allowedRoles={["super_admin", "operations"]}><AdminOrders /></ProtectedRoute>} />
+            <Route path="/admin/subscriptions" element={<ProtectedRoute allowedRoles={["super_admin", "operations"]}><AdminSubscriptions /></ProtectedRoute>} />
+            <Route path="/admin/menu" element={<ProtectedRoute allowedRoles={["super_admin", "operations"]}><AdminMenu /></ProtectedRoute>} />
+            <Route path="/admin/customers" element={<ProtectedRoute allowedRoles={["super_admin", "operations", "support"]}><AdminCustomers /></ProtectedRoute>} />
+            <Route path="/admin/payments" element={<ProtectedRoute allowedRoles={["super_admin", "operations"]}><AdminPayments /></ProtectedRoute>} />
+            <Route path="/admin/delivery" element={<ProtectedRoute allowedRoles={["super_admin", "operations"]}><AdminDelivery /></ProtectedRoute>} />
+            <Route path="/admin/marketing" element={<ProtectedRoute allowedRoles={["super_admin", "marketing"]}><AdminMarketing /></ProtectedRoute>} />
+            <Route path="/admin/inventory" element={<ProtectedRoute allowedRoles={["super_admin", "operations"]}><AdminInventory /></ProtectedRoute>} />
+            <Route path="/admin/reviews" element={<ProtectedRoute allowedRoles={["super_admin", "support", "marketing"]}><AdminReviews /></ProtectedRoute>} />
+            <Route path="/admin/analytics" element={<ProtectedRoute allowedRoles={["super_admin", "marketing"]}><AdminAnalytics /></ProtectedRoute>} />
+            <Route path="/admin/support" element={<ProtectedRoute allowedRoles={["super_admin", "support"]}><AdminSupport /></ProtectedRoute>} />
+            <Route path="/admin/staff" element={<ProtectedRoute allowedRoles={["super_admin"]}><AdminStaff /></ProtectedRoute>} />
+            <Route path="/admin/settings" element={<ProtectedRoute allowedRoles={["super_admin"]}><AdminSettings /></ProtectedRoute>} />
             
             {/* Catch-all */}
             <Route path="*" element={<NotFound />} />
