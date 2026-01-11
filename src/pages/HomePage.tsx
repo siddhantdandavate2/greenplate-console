@@ -100,7 +100,7 @@ const testimonials = [
 
 export default function HomePage() {
   return (
-    <CustomerLayout cartItemCount={3}>
+    <CustomerLayout>
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-secondary via-background to-muted py-20 lg:py-32">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(var(--primary)/0.1),transparent_50%)]" />
