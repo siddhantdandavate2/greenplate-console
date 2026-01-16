@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ShoppingCart, User, Search, Menu, X, Leaf, LogOut } from "lucide-react";
+import { ShoppingCart, User, Search, Menu, X, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -13,6 +13,7 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
 import { useApp } from "@/contexts/AppContext";
+import satvikLogo from "@/assets/satvik-salad-logo.png";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -41,11 +42,13 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <Leaf className="w-5 h-5 text-primary-foreground" />
-            </div>
+            <img 
+              src={satvikLogo} 
+              alt="Sathvik Salad" 
+              className="w-12 h-12 object-contain"
+            />
             <span className="font-display text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-              Healthy Greens
+              Sathvik Salad
             </span>
           </Link>
 

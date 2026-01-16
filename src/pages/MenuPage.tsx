@@ -17,110 +17,160 @@ import { CustomerLayout } from "@/components/layout/CustomerLayout";
 import { useToast } from "@/hooks/use-toast";
 import { useApp } from "@/contexts/AppContext";
 
+// Import menu images
+import sproutsBhelSalad from "@/assets/menu/sprouts-bhel-salad.jpg";
+import pastaSuperBowl from "@/assets/menu/pasta-super-bowl.jpg";
+import chatpataChangaSalad from "@/assets/menu/chatpata-chana-salad.jpg";
+import mexicanSupremeBowl from "@/assets/menu/mexican-supreme-bowl.jpg";
+import magicSaladBowl from "@/assets/menu/magic-salad-bowl.jpg";
+import proteinBombSalad from "@/assets/menu/protein-bomb-salad.jpg";
+import wholeWheatGrilledSandwich from "@/assets/menu/whole-wheat-grilled-sandwich.jpg";
+import magicSandwichWithDip from "@/assets/menu/magic-sandwich-with-dip.jpg";
+import kidneyBeansSalad from "@/assets/menu/kidney-beans-salad.jpg";
+import watermelonFetaSalad from "@/assets/menu/watermelon-feta-salad.jpg";
+
 const categories = [
   { id: "all", label: "All" },
-  { id: "signature", label: "Signature" },
-  { id: "protein", label: "Protein Rich" },
-  { id: "detox", label: "Detox" },
-  { id: "build-your-own", label: "Build Your Own" },
+  { id: "lunch", label: "Lunch" },
+  { id: "dinner", label: "Dinner" },
+  { id: "proteins", label: "Proteins" },
+  { id: "high-carb", label: "High Carb" },
+  { id: "healthy", label: "Healthy" },
 ];
 
+// Updated menu with vegetarian items from Sathvik Salad menu
 const menuItems = [
+  // Lunch Menu Items
   {
     id: "1",
-    name: "Mediterranean Quinoa Bowl",
-    description: "Fluffy quinoa with roasted veggies, feta, and herb dressing",
-    price: 349,
-    calories: 420,
+    name: "Sprouts Bhel Salad",
+    description: "Crunchy sprouts mixed with tangy chutneys, onions, and fresh coriander",
+    price: 180,
+    calories: 360,
     protein: 18,
-    category: "signature",
-    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop",
-    tags: ["Vegetarian", "High Fiber"],
+    category: "lunch",
+    image: sproutsBhelSalad,
+    tags: ["Vegetarian", "High Fiber", "Proteins"],
     popular: true,
+    day: "Monday",
   },
   {
     id: "2",
-    name: "Grilled Chicken Power Bowl",
-    description: "Tender grilled chicken with brown rice, avocado, and chimichurri",
-    price: 449,
-    calories: 520,
-    protein: 42,
-    category: "protein",
-    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=300&fit=crop",
-    tags: ["High Protein", "Low Carb"],
+    name: "Pasta Super Bowl",
+    description: "Colorful penne pasta with fresh vegetables, herbs, and creamy sauce",
+    price: 200,
+    calories: 340,
+    protein: 14,
+    category: "lunch",
+    image: pastaSuperBowl,
+    tags: ["Vegetarian", "High Carb"],
     popular: true,
+    day: "Tuesday",
   },
   {
     id: "3",
-    name: "Green Detox Bowl",
-    description: "Kale, spinach, cucumber, green apple, and chia seeds",
-    price: 299,
-    calories: 280,
-    protein: 12,
-    category: "detox",
-    image: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&h=300&fit=crop",
-    tags: ["Vegan", "Detox"],
-    popular: false,
+    name: "Chatpata Chana Salad",
+    description: "Spiced chickpeas with onions, tomatoes, green chilies, and lemon dressing",
+    price: 180,
+    calories: 335,
+    protein: 16,
+    category: "lunch",
+    image: chatpataChangaSalad,
+    tags: ["Vegetarian", "Proteins", "High Fiber"],
+    popular: true,
+    day: "Wednesday",
   },
   {
     id: "4",
-    name: "Salmon Poke Bowl",
-    description: "Fresh salmon, sushi rice, edamame, and wasabi mayo",
-    price: 549,
-    calories: 480,
-    protein: 35,
-    category: "protein",
-    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=300&fit=crop",
-    tags: ["Omega-3", "High Protein"],
-    popular: true,
+    name: "Mexican Supreme Bowl",
+    description: "Rice, black beans, corn, avocado, and fresh salsa with colorful veggies",
+    price: 200,
+    calories: 340,
+    protein: 15,
+    category: "lunch",
+    image: mexicanSupremeBowl,
+    tags: ["Vegetarian", "High Carb", "Healthy"],
+    popular: false,
+    day: "Thursday",
   },
   {
     id: "5",
-    name: "Buddha Bowl",
-    description: "Roasted chickpeas, sweet potato, tahini, and mixed greens",
-    price: 329,
-    calories: 380,
-    protein: 16,
-    category: "signature",
-    image: "https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?w=400&h=300&fit=crop",
-    tags: ["Vegan", "High Fiber"],
+    name: "Magic Salad Bowl",
+    description: "Mixed greens with colorful vegetables, nuts, seeds, and creamy dressing",
+    price: 180,
+    calories: 360,
+    protein: 12,
+    category: "lunch",
+    image: magicSaladBowl,
+    tags: ["Vegetarian", "Healthy", "Fresh Fruits"],
     popular: false,
+    day: "Friday",
   },
   {
     id: "6",
-    name: "Asian Tofu Stir-Fry",
-    description: "Crispy tofu with mixed vegetables in ginger-soy sauce",
-    price: 299,
-    calories: 320,
-    protein: 22,
-    category: "detox",
-    image: "https://images.unsplash.com/photo-1547592180-85f173990554?w=400&h=300&fit=crop",
-    tags: ["Vegan", "Low Calorie"],
-    popular: false,
+    name: "Protein Bomb Salad",
+    description: "Paneer cubes with chickpeas, sprouts, quinoa, and leafy greens",
+    price: 200,
+    calories: 335,
+    protein: 28,
+    category: "lunch",
+    image: proteinBombSalad,
+    tags: ["Vegetarian", "High Protein", "Proteins"],
+    popular: true,
+    day: "Saturday",
   },
+  // Dinner Menu Items
   {
     id: "7",
-    name: "Protein Packed Steak Bowl",
-    description: "Lean steak strips, quinoa, roasted peppers, and Greek yogurt",
-    price: 599,
-    calories: 580,
-    protein: 48,
-    category: "protein",
-    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=300&fit=crop",
-    tags: ["High Protein", "Iron Rich"],
+    name: "Whole Wheat Veg Grilled Sandwich",
+    description: "Golden toasted whole wheat bread with fresh vegetables and cheese",
+    price: 180,
+    calories: 360,
+    protein: 14,
+    category: "dinner",
+    image: wholeWheatGrilledSandwich,
+    tags: ["Vegetarian", "Grain", "Healthy"],
     popular: true,
+    day: "Monday",
   },
   {
     id: "8",
-    name: "Tropical Acai Bowl",
-    description: "Acai, mango, banana, granola, and coconut flakes",
-    price: 349,
+    name: "Magic Sandwich with Dip",
+    description: "Grilled sandwich with vegetable filling, served with creamy dip",
+    price: 200,
     calories: 340,
-    protein: 8,
-    category: "signature",
-    image: "https://images.unsplash.com/photo-1590301157890-4810ed352733?w=400&h=300&fit=crop",
-    tags: ["Antioxidants", "Energizing"],
+    protein: 12,
+    category: "dinner",
+    image: magicSandwichWithDip,
+    tags: ["Vegetarian", "High Callory"],
     popular: false,
+    day: "Tuesday",
+  },
+  {
+    id: "9",
+    name: "Kidney Beans Salad",
+    description: "Red kidney beans with onions, tomatoes, cucumber, and lemon dressing",
+    price: 180,
+    calories: 360,
+    protein: 18,
+    category: "dinner",
+    image: kidneyBeansSalad,
+    tags: ["Vegetarian", "Proteins", "High Fiber"],
+    popular: false,
+    day: "Friday",
+  },
+  {
+    id: "10",
+    name: "Watermelon Feta Salad",
+    description: "Fresh watermelon cubes with crumbled feta cheese, mint, and mixed greens",
+    price: 200,
+    calories: 335,
+    protein: 10,
+    category: "dinner",
+    image: watermelonFetaSalad,
+    tags: ["Vegetarian", "Fresh Fruits", "Healthy"],
+    popular: true,
+    day: "Saturday",
   },
 ];
 
@@ -190,8 +240,8 @@ export default function MenuPage() {
                 Our Menu
               </h1>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Chef-crafted bowls made with fresh, organic ingredients. 
-                Perfect nutrition for your healthy lifestyle.
+                100% Vegetarian, Satvik meals made with fresh, organic ingredients. 
+                From Earth to Soul - नourishing your body and mind.
               </p>
             </motion.div>
           </div>
@@ -256,6 +306,11 @@ export default function MenuPage() {
                     {item.popular && (
                       <Badge className="absolute top-3 left-3 bg-accent text-accent-foreground">
                         Popular
+                      </Badge>
+                    )}
+                    {item.day && (
+                      <Badge variant="secondary" className="absolute top-3 right-3">
+                        {item.day}
                       </Badge>
                     )}
                   </div>
@@ -324,6 +379,11 @@ export default function MenuPage() {
               <p className="text-muted-foreground">Try adjusting your search or filters</p>
             </div>
           )}
+
+          {/* Note */}
+          <p className="text-center text-sm text-muted-foreground mt-8 italic">
+            Note: All meals are 100% vegetarian and Satvik. Images shown are for representation.
+          </p>
         </div>
       </div>
     </CustomerLayout>
