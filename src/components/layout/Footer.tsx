@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { Leaf, Mail, Phone, MapPin, Instagram, Facebook, Twitter, Youtube } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Facebook, Twitter, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import satvikLogo from "@/assets/satvik-salad-logo.png";
 
 const footerLinks = {
   company: [
@@ -25,7 +26,7 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Instagram, href: "https://www.instagram.com/satviksalad/", label: "Instagram" },
   { icon: Facebook, href: "#", label: "Facebook" },
   { icon: Twitter, href: "#", label: "Twitter" },
   { icon: Youtube, href: "#", label: "YouTube" },
@@ -64,26 +65,36 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-primary-foreground flex items-center justify-center">
-                <Leaf className="w-5 h-5 text-primary" />
-              </div>
-              <span className="font-display text-xl font-bold">Healthy Greens</span>
+              <img 
+                src={satvikLogo} 
+                alt="Sathvik Salad" 
+                className="w-12 h-12 object-contain bg-white rounded-full p-1"
+              />
+              <span className="font-display text-xl font-bold">Sathvik Salad</span>
             </Link>
+            <p className="text-primary-foreground/70 mb-2 font-medium">
+              From Earth to Soul
+            </p>
             <p className="text-primary-foreground/70 mb-6 max-w-sm">
-              Taste Meets Wellness in Every Bowl. Fresh, nutritious meals delivered to your doorstep.
+              100% Vegetarian, Satvik meals delivered to your doorstep. Fresh, nutritious, and delicious.
             </p>
             <div className="space-y-3 text-sm text-primary-foreground/70">
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4" />
-                <span>+91 98765 43210</span>
+                <span>+91 7990409867</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4" />
-                <span>hello@healthygreens.com</span>
+                <span>thesimplysalad0@gmail.com</span>
               </div>
-              <div className="flex items-center gap-3">
-                <MapPin className="w-4 h-4" />
-                <span>Mumbai, India</span>
+              <div className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 mt-0.5" />
+                <div className="text-sm">
+                  <p className="font-medium">Ahmedabad:</p>
+                  <p>202, Magnifico Commercial Hub, Thaltej</p>
+                  <p className="mt-2 font-medium">Mumbai Andheri:</p>
+                  <p>Shop F3-011, Jumbo Darshan CHS, Near Regency Hotel</p>
+                </div>
               </div>
             </div>
           </div>
@@ -143,13 +154,15 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-primary-foreground/60">
-            © 2024 Healthy Greens. All rights reserved.
+            © 2026 Sathvik Salad. All rights reserved. Ensalada Foods Private Limited.
           </p>
           <div className="flex items-center gap-4">
             {socialLinks.map((social) => (
               <a
                 key={social.label}
                 href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
                 aria-label={social.label}
               >
