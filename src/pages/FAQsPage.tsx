@@ -13,8 +13,8 @@ const faqCategories = [
     title: "General",
     faqs: [
       {
-        question: "What is Healthy Greens?",
-        answer: "Healthy Greens is a premium healthy food delivery service that provides fresh, nutritious, and delicious meals right to your doorstep. We offer both one-time orders and subscription plans.",
+        question: "What is Sathvik Salad?",
+        answer: "Sathvik Salad is a premium Satvik, 100% vegetarian healthy food delivery service that provides fresh, nutritious, and delicious meals right to your doorstep. We offer both one-time orders and subscription plans.",
       },
       {
         question: "Where do you deliver?",
@@ -111,7 +111,7 @@ export default function FAQsPage() {
               Frequently Asked Questions
             </h1>
             <p className="text-lg text-muted-foreground">
-              Everything you need to know about Healthy Greens
+              Everything you need to know about Sathvik Salad
             </p>
           </motion.div>
         </div>

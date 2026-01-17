@@ -200,7 +200,7 @@ export default function HelpPage() {
                   <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-semibold text-foreground mb-1">Email Us</h3>
-                <p className="text-sm text-muted-foreground">support@healthygreens.com</p>
+                <p className="text-sm text-muted-foreground">support@satviksalad.com</p>
               </CardContent>
             </Card>
             <Card className="text-center hover:shadow-md transition-shadow cursor-pointer">

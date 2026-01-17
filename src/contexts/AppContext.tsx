@@ -75,12 +75,12 @@ interface AppContextType {
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
-// Demo users - Admin credentials: admin@healthygreens.com / admin123
+// Demo users - Admin credentials: admin@satviksalad.com / admin123
 const DEMO_USERS: User[] = [
   {
     id: "admin-1",
     name: "Admin User",
-    email: "admin@healthygreens.com",
+    email: "admin@satviksalad.com",
     phone: "+91 98765 43210",
     isAdmin: true,
     role: "super_admin",
@@ -150,7 +150,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   const login = (email: string, password: string): boolean => {
     // Demo login - accept any password for demo users
-    // Admin: admin@healthygreens.com / admin123
+    // Admin: admin@satviksalad.com / admin123
     // User: priya@example.com / password123 (or any password)
     const foundUser = DEMO_USERS.find(u => u.email.toLowerCase() === email.toLowerCase());
     if (foundUser) {

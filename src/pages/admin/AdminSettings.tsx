@@ -18,8 +18,8 @@ export default function AdminSettings() {
             <CardHeader><CardTitle className="flex items-center gap-2"><Store className="w-5 h-5" />Business Details</CardTitle></CardHeader>
             <CardContent className="space-y-4">
               <div className="grid md:grid-cols-2 gap-4">
-                <div><Label>Business Name</Label><Input defaultValue="Healthy Greens" /></div>
-                <div><Label>Contact Email</Label><Input defaultValue="support@healthygreens.com" /></div>
+                <div><Label>Business Name</Label><Input defaultValue="Sathvik Salad" /></div>
+                <div><Label>Contact Email</Label><Input defaultValue="support@satviksalad.com" /></div>
                 <div><Label>Phone Number</Label><Input defaultValue="+91 98765 43210" /></div>
                 <div><Label>GST Number</Label><Input defaultValue="27AABCT1234A1ZT" /></div>
               </div>

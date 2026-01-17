@@ -67,7 +67,7 @@ export default function PrivacyPage() {
               </h2>
               <p className="text-muted-foreground mb-6">
                 You have the right to access, correct, or delete your personal data.
-                Contact us at privacy@healthygreens.com to exercise these rights.
+                Contact us at privacy@satviksalad.com to exercise these rights.
               </p>
 
               <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">
@@ -75,7 +75,7 @@ export default function PrivacyPage() {
               </h2>
               <p className="text-muted-foreground mb-6">
                 For privacy-related inquiries, please contact us at:
-                privacy@healthygreens.com or call +91 98765 43210.
+                privacy@satviksalad.com or call +91 98765 43210.
               </p>
             </div>
           </motion.div>

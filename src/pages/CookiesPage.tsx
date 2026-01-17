@@ -85,7 +85,7 @@ export default function CookiesPage() {
                 5. Contact Us
               </h2>
               <p className="text-muted-foreground mb-6">
-                For questions about our cookie policy, please contact privacy@healthygreens.com.
+                For questions about our cookie policy, please contact privacy@satviksalad.com.
               </p>
             </div>
           </motion.div>

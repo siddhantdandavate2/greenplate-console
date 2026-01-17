@@ -7,17 +7,17 @@ import { CustomerLayout } from "@/components/layout/CustomerLayout";
 const pressReleases = [
   {
     date: "Jan 10, 2024",
-    title: "Healthy Greens Raises ₹50 Crore in Series B Funding",
+    title: "Sathvik Salad Raises ₹50 Crore in Series B Funding",
     description: "Funding to be used for pan-India expansion and technology enhancement.",
   },
   {
     date: "Dec 5, 2023",
-    title: "Healthy Greens Launches Corporate Wellness Program",
-    description: "New B2B offering targets corporate offices with healthy meal subscriptions.",
+    title: "Sathvik Salad Launches Corporate Wellness Program",
+    description: "New B2B offering targets corporate offices with Satvik meal subscriptions.",
   },
   {
     date: "Oct 15, 2023",
-    title: "Healthy Greens Crosses 1 Million Meals Delivered Milestone",
+    title: "Sathvik Salad Crosses 1 Million Meals Delivered Milestone",
     description: "Celebrates customer trust with special offers and new menu items.",
   },
   {
@@ -51,7 +51,7 @@ export default function PressPage() {
               Press & Media
             </h1>
             <p className="text-lg text-muted-foreground">
-              Latest news, press releases, and media resources about Healthy Greens.
+              Latest news, press releases, and media resources about Sathvik Salad.
             </p>
           </motion.div>
         </div>
@@ -138,7 +138,7 @@ export default function PressPage() {
             </p>
             <Button variant="outline" size="lg">
               <Mail className="w-4 h-4 mr-2" />
-              press@healthygreens.com
+              press@satviksalad.com
             </Button>
           </div>
         </div>

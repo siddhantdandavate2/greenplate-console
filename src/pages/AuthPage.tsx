@@ -42,7 +42,7 @@ export default function AuthPage() {
         description: "You have successfully logged in.",
       });
       // Check if admin
-      if (loginEmail.toLowerCase() === "admin@healthygreens.com") {
+      if (loginEmail.toLowerCase() === "admin@satviksalad.com") {
         navigate("/admin");
       } else {
         navigate("/account");
@@ -50,7 +50,7 @@ export default function AuthPage() {
     } else {
       toast({
         title: "Login failed",
-        description: "Invalid email or password. Try: admin@healthygreens.com / admin123",
+        description: "Invalid email or password. Try: admin@satviksalad.com / admin123",
         variant: "destructive",
       });
     }
@@ -68,7 +68,7 @@ export default function AuthPage() {
     if (success) {
       toast({
         title: "Account created! 🎉",
-        description: "Welcome to Healthy Greens!",
+        description: "Welcome to Sathvik Salad!",
       });
       navigate("/account");
     } else {
@@ -89,11 +89,9 @@ export default function AuthPage() {
       >
         {/* Logo */}
         <Link to="/" className="flex items-center justify-center gap-2 mb-8">
-          <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-            <Leaf className="w-6 h-6 text-primary-foreground" />
-          </div>
+          <img src="/satvik-favicon.png" alt="Sathvik Salad" className="w-12 h-12 rounded-full object-contain" />
           <span className="font-display text-2xl font-bold text-foreground">
-            Healthy Greens
+            Sathvik Salad
           </span>
         </Link>
 
@@ -162,7 +160,7 @@ export default function AuthPage() {
                 <div className="mt-6 p-4 bg-muted rounded-lg">
                   <p className="text-sm font-medium text-foreground mb-2">Demo Credentials:</p>
                   <div className="text-xs text-muted-foreground space-y-1">
-                    <p><strong>Admin:</strong> admin@healthygreens.com / admin123</p>
+                    <p><strong>Admin:</strong> admin@satviksalad.com / admin123</p>
                     <p><strong>User:</strong> priya@example.com / (any password)</p>
                   </div>
                 </div>

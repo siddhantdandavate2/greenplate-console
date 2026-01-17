@@ -18,7 +18,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    details: ["hello@healthygreens.com", "support@healthygreens.com"],
+    details: ["hello@satviksalad.com", "support@satviksalad.com"],
   },
   {
     icon: MapPin,

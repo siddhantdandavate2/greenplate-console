@@ -76,7 +76,7 @@ export default function RefundsPage() {
                 7. Contact Us
               </h2>
               <p className="text-muted-foreground mb-6">
-                For refund requests or questions, contact support@healthygreens.com or 
+                For refund requests or questions, contact support@satviksalad.com or 
                 call +91 98765 43210. Our support team is available Mon-Sat, 9 AM - 9 PM.
               </p>
             </div>

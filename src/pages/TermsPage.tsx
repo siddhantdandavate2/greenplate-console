@@ -23,7 +23,7 @@ export default function TermsPage() {
                 1. Acceptance of Terms
               </h2>
               <p className="text-muted-foreground mb-6">
-                By accessing or using Healthy Greens services, you agree to be bound by these 
+                By accessing or using Sathvik Salad services, you agree to be bound by these 
                 Terms of Service and all applicable laws and regulations. If you do not agree 
                 with any of these terms, you are prohibited from using or accessing this site.
               </p>
@@ -69,7 +69,7 @@ export default function TermsPage() {
                 6. Limitation of Liability
               </h2>
               <p className="text-muted-foreground mb-6">
-                Healthy Greens shall not be liable for any indirect, incidental, special, 
+                Sathvik Salad shall not be liable for any indirect, incidental, special, 
                 consequential, or punitive damages arising from your use of our services.
               </p>
 
@@ -77,7 +77,7 @@ export default function TermsPage() {
                 7. Contact
               </h2>
               <p className="text-muted-foreground mb-6">
-                For questions about these Terms, please contact us at legal@healthygreens.com.
+                For questions about these Terms, please contact us at legal@satviksalad.com.
               </p>
             </div>
           </motion.div>

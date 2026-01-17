@@ -61,11 +61,11 @@ export default function AboutPage() {
             className="text-center max-w-3xl mx-auto"
           >
             <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
-              About Healthy Greens
+              About Sathvik Salad
             </h1>
             <p className="text-lg text-muted-foreground">
-              We're on a mission to make healthy eating easy, delicious, and accessible 
-              to everyone. Fresh ingredients, expert chefs, and a passion for wellness.
+              We're on a mission to make Satvik, healthy eating easy, delicious, and accessible 
+              to everyone. Fresh vegetarian ingredients, expert chefs, and a passion for wellness.
             </p>
           </motion.div>
         </div>
@@ -96,9 +96,9 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Healthy Greens was born in 2020 from a simple idea: healthy food should 
+                  Sathvik Salad was born in 2020 from a simple idea: Satvik, healthy food should 
                   never be boring or inconvenient. Our founders, passionate about nutrition 
-                  and culinary arts, set out to create meals that are both nourishing and 
+                  and culinary arts, set out to create 100% vegetarian meals that are both nourishing and 
                   delicious.
                 </p>
                 <p>
@@ -107,8 +107,8 @@ export default function AboutPage() {
                   across the city.
                 </p>
                 <p>
-                  Every bowl we create is a labor of love, combining fresh organic ingredients 
-                  with culinary expertise to deliver meals that fuel your body and delight 
+                  Every bowl we create is a labor of love, combining fresh organic vegetarian ingredients 
+                  with culinary expertise to deliver Satvik meals that fuel your body and delight 
                   your taste buds.
                 </p>
               </div>
