@@ -117,26 +117,34 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(var(--primary)/0.1),transparent_50%)]" />
         
         {/* Floating Sandwich - Left with Bouncy Effect */}
-        <motion.img
-          src={floatingSandwich}
-          alt=""
-          className="absolute left-0 top-1/3 w-32 md:w-48 lg:w-64 opacity-90 -translate-x-1/4 animate-bounce-slow"
+        <motion.div
+          className="absolute left-0 top-1/3 w-32 md:w-48 lg:w-64 -translate-x-1/4"
           initial={{ x: -100, opacity: 0, rotate: -10 }}
-          animate={{ x: 0, opacity: 0.9, rotate: 0 }}
+          animate={{ x: 0, opacity: 1, rotate: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          style={{ filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.2))" }}
-        />
+        >
+          <img
+            src={floatingSandwich}
+            alt=""
+            className="w-full h-auto animate-bounce-slow mix-blend-multiply"
+            style={{ filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.15))" }}
+          />
+        </motion.div>
         
         {/* Floating Bowl - Right with Bouncy Effect */}
-        <motion.img
-          src={floatingBowl}
-          alt=""
-          className="absolute right-0 top-1/4 w-32 md:w-48 lg:w-64 opacity-90 translate-x-1/4 animate-bounce-gentle"
+        <motion.div
+          className="absolute right-0 top-1/4 w-32 md:w-48 lg:w-64 translate-x-1/4"
           initial={{ x: 100, opacity: 0, rotate: 10 }}
-          animate={{ x: 0, opacity: 0.9, rotate: 0 }}
+          animate={{ x: 0, opacity: 1, rotate: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          style={{ filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.2))" }}
-        />
+        >
+          <img
+            src={floatingBowl}
+            alt=""
+            className="w-full h-auto animate-bounce-gentle mix-blend-multiply"
+            style={{ filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.15))" }}
+          />
+        </motion.div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
